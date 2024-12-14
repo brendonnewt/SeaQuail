@@ -37,7 +37,7 @@ def get_league():
         )
 
         year = form.yearID.data
-        logger.info(f"{session["username"]} requested league info for {lgID}, {year}")
+        logger.info(f"{session['username']} requested league info for {lgID}, {year}")
 
         with db.session.no_autoflush:
 

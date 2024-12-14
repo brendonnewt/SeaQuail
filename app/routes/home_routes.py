@@ -106,13 +106,13 @@ def login():
 @home_routes.route("/logout")
 def logout():
     # Log logout
-    logger.info(f"Logout: {session["username"]}")
+    logger.info(f"Logout: {session['username']}")
 
     # Logout user
     logout_user()
 
     # Clear session variables
-    logger.info(f"Clearing {session["username"]} session variables")
+    logger.info(f"Clearing {session['username']} session variables")
     session.pop("returned_players", None)
     session.pop("returned_player_ids", None)
     session.pop("username", None)
@@ -136,7 +136,7 @@ def home():
         team_name = form.teamName.data
         year = form.yearID.data
         stats_logger.info(
-            f"{session["username"]} requested team summary for {team_name}, {year}"
+            f"{session['username']} requested team summary for {team_name}, {year}"
         )
 
         with db.session.no_autoflush:

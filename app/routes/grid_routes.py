@@ -183,8 +183,8 @@ def get_player():
 
         if result != None:
             # Log output
-            logger.info(f"Player Returned: {result["player_name"]}")
-            logger.info(f"Years Returned: {result["player_years"]}")
+            logger.info(f"Player Returned: {result['player_name']}")
+            logger.info(f"Years Returned: {result['player_years']}")
 
             # Add player info to session info
             returned_players.append(result)
@@ -210,6 +210,6 @@ def clear_players():
     # Clear the returned_players and returned_player_ids from the session
     session.pop("returned_players", None)
     session.pop("returned_player_ids", None)
-    logger.info(f"Clearing results list for {session["username"]}")
+    logger.info(f"Clearing results list for {session['username']}")
     flash("Player list cleared.", "info")
     return redirect(url_for("grid_routes.get_player"))
