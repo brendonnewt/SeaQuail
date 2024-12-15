@@ -9,6 +9,14 @@
     align-items: center;
 }
 
+.header-logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    padding: 20px 0;
+}
+
 /* Heading styling */
 .about-container h1, .about-container h2 {
     color: #333;
